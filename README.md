@@ -1,26 +1,8 @@
-# Unit 11 Express Homework: Note Taker
+# Note Taker
 
 ## Description
 
-Create an application that can be used to write, save, and delete notes. This application will use an express backend and save and retrieve note data from a JSON file.
-
-* The application frontend has already been created, it's your job to build the backend and connect the two.
-
-* The following HTML routes should be created:
-
-  * GET `/notes` - Should return the `notes.html` file.
-
-  * GET `*` - Should return the `index.html` file
-
-* The application should have a `db.json` file on the backend that will be used to store and retrieve notes using the `fs` module.
-
-* The following API routes should be created:
-
-  * GET `/api/notes` - Should read the `db.json` file and return all saved notes as JSON.
-
-  * POST `/api/notes` - Should receive a new note to save on the request body, add it to the `db.json` file, and then return the new note to the client.
-
-  * DELETE `/api/notes/:id` - Should receive a query parameter containing the id of a note to delete. This means you'll need to find a way to give each note a unique `id` when it's saved. In order to delete a note, you'll need to read all notes from the `db.json` file, remove the note with the given `id` property, and then rewrite the notes to the `db.json` file.
+A web application that saves and stores notes using a json file. When you click the save icon in the top right, it will send a POST request that stores your note into the db.json file. On each page load, the site sends a GET request that takes data from the db.json and then displays it as notes on the page. 
 
 ## User Story
 
@@ -30,51 +12,50 @@ I WANT to be able to delete notes I've written before
 
 SO THAT I can organize my thoughts and keep track of tasks I need to complete
 
-## Business Context
 
-For users that need to keep track of a lot of information, it's easy to forget or be unable to recall something important. Being able to take persistent notes allows users to have written information available when needed.
+## Table of Contents 
+* [Installation](#installation)
+* [Usage](#usage)
+* [Contributing](#contributing)
+* [Tests](#tests)
+* [Questions](#questions)
+* [License](#license)
 
-## Acceptance Criteria
+## Installation
 
-Application should allow users to create and save notes.
+To install necessary dependencies, run the following command:
+---
+npm install
 
-Application should allow users to view previously saved notes.
+## Usage
 
-Application should allow users to delete previously saved notes.
+Run the command "node app.js" in the terminal.
 
-## Deploying the App
+## Contributing
 
-You will not be able to deploy your server side code on GitHub pages. This app should be deployed on Heroku. Carefully follow the [Heroku Guide](../04-Important/HerokuGuide.md) for getting your app deployed on Heroku.
+N.A.
 
-- - -
+## Tests
+To run tests, run the following command:
+---
+npm run test
 
-## Commit Early and Often
 
-One of the most important skills to master as a web developer is version control. Building the habit of committing via Git is important for two reasons:
+## Questions
 
-* Your commit history is a signal to employers that you are actively working on projects and learning new skills.
+If you have any questions about the repo, open an issue or contact me directly at eric.h.warshawsky@gmail.com. 
+You can find more of my work at [ericw142](https://github.com/ericw142/).
 
-* Your commit history allows you to revert your codebase in the event that you need to return to a previous state.
+## License
 
-Follow these guidelines for committing:
+[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
 
-* Make single-purpose commits for related changes to ensure a clean, manageable history. If you are fixing two issues, make two commits.
+This is free and unencumbered software released into the public domain.
 
-* Write descriptive, meaningful commit messages so that you and anyone else looking at your repository can easily understand its history.
+Anyone is free to copy, modify, publish, use, compile, sell, or distribute this software, either in source code form or as a compiled binary, for any purpose, commercial or non-commercial, and by any means.
 
-* Don't commit half-done work, for the sake of your collaborators (and your future self!).
+In jurisdictions that recognize copyright laws, the author or authors of this software dedicate any and all copyright interest in the software to the public domain. We make this dedication for the benefit of the public at large and to the detriment of our heirs and successors. We intend this dedication to be an overt act of relinquishment in perpetuity of all present and future rights to this software under copyright law.
 
-* Test your application before you commit to ensure functionality at every step in the development process.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-We would like you to have well over 200 commits by graduation, so commit early and often!
-
-## Submission on BCS
-
-You are required to submit the following:
-
-* The URL of the deployed application. This should be the link to the url provided by Heroku. Be sure not to submit a link to the Heroku dashboard.
-
-* The URL of the GitHub repository
-
-- - -
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+For more information, please refer to https://unlicense.org
